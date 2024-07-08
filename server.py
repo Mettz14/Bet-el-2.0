@@ -29,7 +29,6 @@
 
 
 
-
 # No toques nada de aquí para abajo, puedes dañarlo
 import requests,os,base64,glob,time
 if os.path.exists("servidor.py"):
@@ -46,6 +45,7 @@ def download_latest_release(download_path='.'):
 		data = pet.json()
 		url = data.get('latest')
 		version = url.split("/")[-1]
+
 		if version in glob.glob("*.msp"):
 			return version
 		else:
